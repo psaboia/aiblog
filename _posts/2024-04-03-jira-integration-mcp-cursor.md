@@ -8,13 +8,26 @@ tags: [jira, cursor, mcp, automation, productivity]
 
 # Using MCP-Powered Cursor Agent to Automate Jira Workflow
 
-This use case demonstrates how the **MCP Server** integrated with the **Cursor Agent** can streamline Jira issue management and development workflows. By combining conversational interface capabilities with automation tools, we were able to query Jira tasks, generate implementation code, push it to a repository, and update the task's status—all in a single, interactive session.
+This use case demonstrates how the **MCP Server** integrated with the **Cursor Agent** can streamline Jira issue management and development workflows. The integration is powered by [mcp-atlassian](https://github.com/sooperset/mcp-atlassian), an open-source MCP server that provides seamless interaction with Atlassian products like Jira and Confluence.
+
+By combining this MCP server's capabilities with Cursor's conversational interface, we were able to query Jira tasks, generate implementation code, push it to a repository, and update the task's status—all in a single, interactive session.
+
+## About MCP Atlassian Server
+
+The [mcp-atlassian](https://github.com/sooperset/mcp-atlassian) server provides a comprehensive set of tools for interacting with Atlassian products through MCP. Key features include:
+- Full Jira issue management (create, update, transition, comment)
+- Project and issue search capabilities
+- Worklog management
+- Epic linking and subtask handling
+- Confluence integration for documentation
+
+This integration enables developers to manage their entire workflow directly from Cursor, reducing context switching and improving productivity.
 
 ---
 
 ### 🛠️ Agent Capabilities Overview
 
-The agent lists all available Jira functionalities, including issue creation, updates, transitions, linking, and search.
+Using the mcp-atlassian server, the agent provides access to all Jira functionalities, including issue creation, updates, transitions, linking, and search:
 
 ![Cursor Agent Jira Capabilities]({{ site.baseurl }}/assets/images/1-jira-tools.png)
 
