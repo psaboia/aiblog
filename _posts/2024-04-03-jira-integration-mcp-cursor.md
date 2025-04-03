@@ -6,76 +6,69 @@ categories: [Development, Tools]
 tags: [jira, cursor, mcp, automation, productivity]
 ---
 
-One of the powerful features of Cursor is its ability to interact with Jira through the MCP (Multi-Command Protocol) server. In this post, I'll walk you through a real example of how I used this integration to manage a development task from start to finish.
+# Using MCP-Powered Cursor Agent to Automate Jira Workflow
 
-## The Task: Adding a Menu Bar
+This use case demonstrates how the **MCP Server** integrated with the **Cursor Agent** can streamline Jira issue management and development workflows. By combining conversational interface capabilities with automation tools, we were able to query Jira tasks, generate implementation code, push it to a repository, and update the task's status—all in a single, interactive session.
 
-I started with a Jira ticket (AIB-1) that required adding a menu bar to display links to the four most recent blog posts and a link to view all posts. Here's what the initial ticket looked like:
+---
 
-![Initial Jira Ticket]({{ site.baseurl }}/assets/images/jira-ticket-initial.png)
+### 🛠️ Agent Capabilities Overview
 
-The ticket was in the "To Do" status and assigned to me. Using Cursor's MCP integration, I was able to:
-1. View the ticket details
-2. Implement the required changes
-3. Update the ticket status
-4. Add detailed comments about the implementation
+The agent lists all available Jira functionalities, including issue creation, updates, transitions, linking, and search.
 
-## Implementing the Solution
+![Cursor Agent Jira Capabilities]({{ site.baseurl }}/assets/images/1-jira-tools.png)
 
-After implementing the menu bar feature (which included creating a custom header and an "All Posts" page), I used Cursor's MCP commands to:
+---
 
-1. Check the current ticket status:
-```
-mcp_mcp_atlassian_jira_get_issue AIB-1
-```
+### 🔍 Querying Assigned Tasks
 
-2. Get available status transitions:
-```
-mcp_mcp_atlassian_jira_get_transitions AIB-1
-```
+We asked the agent to check for any Jira issues assigned in the **aiblog** project. It correctly used JQL and returned an open task: *Add a menu bar with links to the four latest posts and one link to view all posts*.
 
-3. Update the ticket status to "Done" with a detailed comment:
-```
-mcp_mcp_atlassian_jira_transition_issue AIB-1 31 "Completed implementation..."
-```
+![Search for Assigned Issues]({{ site.baseurl }}/assets/images/2-jira-search-assigned.png)
 
-## The Result
+---
 
-After the implementation and status update, the ticket was successfully moved to "Done" with a detailed comment tracking all the changes made:
+### ✨ Implementing the Requested Feature
 
-![Updated Jira Ticket]({{ site.baseurl }}/assets/images/jira-ticket-done.png)
+The agent scanned the existing Jekyll project, created the necessary layout and header files, and implemented the new functionality as requested.
 
-The comment included:
-- Created custom header with latest posts section
-- Added "All Posts" page with complete post listing
-- Implemented responsive design
-- Added proper styling matching the site theme
-- Changes committed and pushed to repository (commit: 5bce37a)
+![Code Implementation Plan and Execution]({{ site.baseurl }}/assets/images/3-implement-feature.png)
 
-## Benefits of MCP Integration
+---
 
-This integration between Cursor and Jira through MCP offers several advantages:
+### ✅ Committing and Updating Jira Status
 
-1. **Seamless Workflow**: No need to switch between your IDE and browser to update Jira tickets
-2. **Detailed Tracking**: Easy to add comprehensive comments with implementation details
-3. **Version Control Integration**: Ability to reference commit hashes in ticket updates
-4. **Status Management**: Simple transition between ticket statuses
-5. **Time Efficiency**: Reduced context switching while working on tasks
+The agent staged and committed the code, pushed it to GitHub, and transitioned the Jira issue from "To Do" to "Done" using MCP tools.
 
-## Available Jira Commands
+![Commit and Jira Update]({{ site.baseurl }}/assets/images/4-git-jira-update.png)
 
-Some useful Jira commands available through MCP in Cursor include:
+---
 
-- `jira_search`: Search for issues using JQL
-- `jira_get_issue`: Get detailed information about a specific issue
-- `jira_get_transitions`: View available status transitions
-- `jira_transition_issue`: Update issue status
-- `jira_add_comment`: Add comments to issues
-- `jira_create_issue`: Create new issues
-- `jira_update_issue`: Update existing issues
+### 📋 Jira Issue Before Update
 
-## Conclusion
+This is how the Jira issue looked before the agent completed the task:
 
-The integration between Cursor and Jira through MCP significantly streamlines the development workflow. It allows developers to manage their tasks, update tickets, and track progress without leaving their IDE. This not only saves time but also encourages better documentation and tracking of development work.
+![Jira Before - To Do]({{ site.baseurl }}/assets/images/5-jira-before.png)
 
-In future posts, I'll explore more advanced features of the MCP integration and share additional productivity tips for using Cursor effectively in your development workflow. 
+---
+
+### 📦 Jira Issue After Update
+
+After the agent marked the issue as "Done", here is the updated view:
+
+![Jira After - Done]({{ site.baseurl }}/assets/images/6-jira-after.png)
+
+---
+
+### 💬 Issue Activity with Implementation Summary
+
+The agent also posted a comment in the Jira issue with a summary of the implementation and linked commit hash.
+
+![Jira Comment and Summary]({{ site.baseurl }}/assets/images/7-jira-comment.png)
+
+---
+
+## ✅ Conclusion
+
+This example showcases how integrating the MCP-powered Cursor Agent with Jira enables fast, structured, and traceable work—from task discovery to completion. This approach reduces context switching, speeds up delivery, and maintains tight alignment between code and project tracking tools.
+
