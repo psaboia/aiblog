@@ -1,0 +1,19 @@
+title: AI & Software Development Blog
+description: News and insights about AI and software development
+author: Pedro Moreira
+baseurl: "/aiblog" # the subpath of your site
+url: "" # the base hostname & protocol
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
