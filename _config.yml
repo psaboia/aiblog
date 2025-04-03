@@ -17,3 +17,6 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor
+
+# Force rebuild comment
+# Last updated: 2024-04-03 12:00
