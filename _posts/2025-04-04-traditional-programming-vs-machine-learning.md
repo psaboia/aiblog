@@ -14,33 +14,7 @@ You start with **rules**—the logic you write in code. These rules act on **dat
 
 Here's what that looks like:
 
-```mermaid
-flowchart TD
-    %% Styles
-    classDef blueBox fill:#4285F4,stroke:#333,stroke-width:1px,color:#fff;
-    classDef orangeBox fill:#DB8D00,stroke:#333,stroke-width:1px,color:#fff;
-    classDef ioBox fill:#fff,stroke:#333,stroke-width:1px;
-
-    %% Traditional Programming
-    TP_Rules[Rules]:::ioBox
-    TP_Data[Data]:::ioBox
-    TP_Process[Traditional<br>Programming]:::blueBox
-    TP_Answers[Answers]:::ioBox
-
-    TP_Rules --> TP_Process
-    TP_Data --> TP_Process
-    TP_Process --> TP_Answers
-
-    %% Machine Learning
-    ML_Answers[Answers]:::ioBox
-    ML_Data[Data]:::ioBox
-    ML_Process[Machine<br>Learning]:::orangeBox
-    ML_Rules[Rules]:::ioBox
-
-    ML_Answers --> ML_Process
-    ML_Data --> ML_Process
-    ML_Process --> ML_Rules
-```
+![Traditional Programming vs Machine Learning](/aiblog/assets/images/traditional-vs-ml.svg)
 
 Now, here's where things start to shift.
 
