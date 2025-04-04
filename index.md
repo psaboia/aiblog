@@ -5,8 +5,6 @@ title: Welcome
 
 Generative AI is not merely a tool for creating content more quickly; it represents a paradigm shift in how to approach problems and solutions in software development. 
 
-## Recent Posts
-
 <div class="home-posts">
   {%- if site.posts.size > 0 -%}
     <ul class="post-list">
@@ -25,9 +23,8 @@ Generative AI is not merely a tool for creating content more quickly; it represe
       </li>
       {%- endfor -%}
     </ul>
-
-    <p class="see-all-posts">
-      <a href="{{ '/posts' | relative_url }}">See All Posts →</a>
+    <p class="all-posts">
+      <a href="{{ 'posts' | relative_url }}">View All Posts →</a>
     </p>
   {%- endif -%}
 </div>
@@ -75,12 +72,12 @@ Generative AI is not merely a tool for creating content more quickly; it represe
   margin-top: 0.5rem;
 }
 
-.see-all-posts {
+.all-posts {
   text-align: right;
   margin-top: 2rem;
 }
 
-.see-all-posts a {
+.all-posts a {
   display: inline-block;
   padding: 0.5rem 1rem;
   background-color: #f8f9fa;
@@ -90,8 +87,8 @@ Generative AI is not merely a tool for creating content more quickly; it represe
   transition: background-color 0.2s;
 }
 
-.see-all-posts a:hover {
+.all-posts a:hover {
   background-color: #e9ecef;
   text-decoration: none;
 }
-</style> 
+</style>
