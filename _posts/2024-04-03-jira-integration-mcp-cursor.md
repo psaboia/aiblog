@@ -6,7 +6,7 @@ categories: [Development, Tools]
 tags: [jira, cursor, mcp, automation, productivity]
 ---
 
-# Using MCP-Powered Cursor Agent to Automate Jira Workflow
+<!-- Using MCP-Powered Cursor Agent to Automate Jira Workflow -->
 
 This use case demonstrates how the **MCP Server** integrated with the **Cursor Agent** can streamline Jira issue management and development workflows. The integration is powered by [mcp-atlassian](https://github.com/sooperset/mcp-atlassian), an open-source MCP server that provides seamless interaction with Atlassian products like Jira and Confluence.
 

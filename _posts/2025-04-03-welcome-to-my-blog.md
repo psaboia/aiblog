@@ -5,8 +5,6 @@ date:   2025-04-03 07:17:30 -0500
 categories: general
 ---
 
-Welcome to my blog! 
-
 As I navigate this rapidly shifting tech landscape, this blog is where I share my journey exploring the intersection of **generative AI** and **software development**. Whether you're a seasoned engineer or just stepping into the tech arena, I’m learning right alongside you—and sharing insights, tools, and lessons that are helping me build smarter, faster, and more creatively with AI.
 
 As generative AI continues to reshape how we code, design, and solve problems, we as developers have a unique opportunity to evolve our craft. This blog is my companion on that path. It's not just about understanding how the tech works but about finding ways to actually use it in real projects and workflows.
