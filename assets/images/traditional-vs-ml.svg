@@ -20,7 +20,7 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="1.0374065"
-     inkscape:cx="426.0625"
+     inkscape:cx="426.06249"
      inkscape:cy="223.15264"
      inkscape:window-width="1512"
      inkscape:window-height="866"
@@ -30,14 +30,14 @@
      inkscape:current-layer="svg13" />
   <!-- Traditional Programming -->
   <g
-     transform="translate(50,40)"
+     transform="translate(50,12)"
      id="g7">
     <!-- Container -->
     <rect
        x="0"
        y="0"
        width="700"
-       height="200"
+       height="230"
        fill="#f8f9fa"
        stroke="#333333"
        stroke-width="1"
@@ -139,14 +139,14 @@
   </g>
   <!-- Machine Learning -->
   <g
-     transform="translate(50,274)"
+     transform="translate(50,266)"
      id="g13">
     <!-- Container -->
     <rect
        x="0"
        y="0"
        width="700"
-       height="200"
+       height="230"
        fill="#f8f9fa"
        stroke="#333333"
        stroke-width="1"
