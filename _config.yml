@@ -18,5 +18,8 @@ exclude:
   - node_modules
   - vendor
 
+# Google Analytics
+google_analytics: "G-DN4VL9R9W0" # Replace with your Google Analytics measurement ID (G-XXXXXXXXXX)
+
 # Force rebuild comment
 # Last updated: 2024-04-03 12:00
