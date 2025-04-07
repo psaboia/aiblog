@@ -2,6 +2,28 @@
 
 This is a personal blog built with Jekyll and hosted on GitHub Pages, focusing on AI and software development topics.
 
+## Features
+
+### 🔍 Search
+- Full-text search functionality powered by [Lunr.js](https://lunrjs.com/)
+- Search through all blog posts' titles and content
+- Real-time search results as you type
+- Search box in the header for quick access
+- Dedicated search page with detailed results at `/search/`
+
+### 💬 Comments
+- Commenting system powered by [Disqus](https://disqus.com/)
+- Support for nested comment threads
+- Social media login integration
+- Comment moderation capabilities
+- Spam protection
+
+### ❤️ Post Reactions
+- Like/unlike functionality for each post
+- Heart button with counter
+- Persistent likes using browser's localStorage
+- Visual feedback for liked posts
+
 ## Local Development
 
 To run this blog locally:
