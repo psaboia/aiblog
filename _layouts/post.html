@@ -12,12 +12,94 @@ layout: default
       </time>
       {%- if page.author -%}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
+      {%- endif -%}
+      • <span class="post-likes"><span id="likeCount">0</span> likes</span>
+      <button id="likeButton" class="like-button" onclick="toggleLike()">❤️ Like</button>
+    </p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
+
+  <!-- Like System -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const postId = window.location.pathname;
+      const likeCount = document.getElementById('likeCount');
+      const likeButton = document.getElementById('likeButton');
+      
+      // Load like state
+      const isLiked = localStorage.getItem(`liked_${postId}`) === 'true';
+      const likes = parseInt(localStorage.getItem(`likes_${postId}`) || '0');
+      
+      likeCount.textContent = likes;
+      if (isLiked) {
+        likeButton.classList.add('liked');
+      }
+    });
+
+    function toggleLike() {
+      const postId = window.location.pathname;
+      const likeCount = document.getElementById('likeCount');
+      const likeButton = document.getElementById('likeButton');
+      
+      const isLiked = localStorage.getItem(`liked_${postId}`) === 'true';
+      const currentLikes = parseInt(localStorage.getItem(`likes_${postId}`) || '0');
+      
+      if (!isLiked) {
+        localStorage.setItem(`liked_${postId}`, 'true');
+        localStorage.setItem(`likes_${postId}`, currentLikes + 1);
+        likeCount.textContent = currentLikes + 1;
+        likeButton.classList.add('liked');
+      } else {
+        localStorage.setItem(`liked_${postId}`, 'false');
+        localStorage.setItem(`likes_${postId}`, currentLikes - 1);
+        likeCount.textContent = currentLikes - 1;
+        likeButton.classList.remove('liked');
+      }
+    }
+  </script>
+
+  <style>
+    .post-likes {
+      margin-right: 10px;
+    }
+    
+    .like-button {
+      background: none;
+      border: 1px solid #e8e8e8;
+      border-radius: 4px;
+      padding: 4px 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .like-button:hover {
+      background: #f8f9fa;
+    }
+    
+    .like-button.liked {
+      background: #ffe6e6;
+      border-color: #ffcccc;
+    }
+  </style>
+
+  <!-- Comments Section -->
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = '{{ site.url }}{{ page.url }}';
+      this.page.identifier = '{{ page.url }}';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the comments.</noscript>
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>

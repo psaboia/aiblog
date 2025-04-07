@@ -21,5 +21,18 @@ exclude:
 # Google Analytics
 google_analytics: "G-DN4VL9R9W0" # Replace with your Google Analytics measurement ID (G-XXXXXXXXXX)
 
+# Disqus Comments
+disqus:
+  # Replace EXAMPLE with your Disqus shortname
+  shortname: aiblog-prisaboia
+
+# Default settings
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: true
+
 # Force rebuild comment
 # Last updated: 2024-04-03 12:00
