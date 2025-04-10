@@ -1,6 +1,6 @@
 # AI & Software Development Blog
 
-This is a personal blog built with Jekyll and hosted on GitHub Pages at [psaboia.github.io/aiblog](psaboia.github.io/aiblog), focusing on AI and software development topics.
+This is a personal blog built with Jekyll and hosted on GitHub Pages at [psaboia.github.io/aiblog](https://psaboia.github.io/aiblog/), focusing on AI and software development topics.
 
 ## Features
 
