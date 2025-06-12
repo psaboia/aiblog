@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mastering Conversation Flow in Claude Code: My Experience with Session Management"
-date: 2024-12-06 15:30:00 -0000
+date: 2024-11-06 15:30:00 -0000
 categories: [Development, Tools]
 tags: [claude-code, ai-development, workflow, productivity]
 ---
