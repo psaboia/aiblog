@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Code Session Management: A Week of Learning Conversation Flow"
-date: 2024-11-06 15:30:00 -0000
+date: 2024-11-12 15:30:00 -0000
 categories: [Development, Tools]
 tags: [claude-code, ai-development, workflow, productivity]
 ---
