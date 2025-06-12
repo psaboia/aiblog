@@ -58,6 +58,10 @@ Configuration file: /Users/pmoreira/aiblog/_config.yml
 
 To stop the server, press `Ctrl+C` in your terminal.
 
+## Maintenance
+
+For detailed maintenance instructions including adding posts, deployment process, and configuration management, see [MAINTENANCE.md](MAINTENANCE.md).
+
 ## Contributing
 
 This is a personal blog, but if you find any issues or have suggestions, feel free to open an issue or submit a pull request.
