@@ -46,6 +46,7 @@ This is a Jekyll-based blog with GitHub Pages deployment using the Minima theme.
 - Hosted on GitHub Pages at https://psaboia.github.io/aiblog
 - Automatic deployment on push to main branch
 - Site builds to `_site/` directory (excluded from git)
+- **Important**: After every push, verify GitHub Actions status with `gh run list --limit 3` to ensure successful deployment
 
 ### Styling
 - Based on Minima theme with custom CSS overrides
